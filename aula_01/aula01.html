@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01</title>
+</head>
+<body>
+    <h1>My first class</h1>
+    <script>
+        // Alert - Chamo a atenção do usuário, fazendo com que ele aceite o que eu desejo
+        // Boas Práticas - é interessante colocar o caminho do comando que deseja, porém depois do ecma 18, não se faz obrigatório
+        window.alert("Click on Ok for see this website")
+        
+        // Prompt - Input do js 
+        let color = window.prompt("Favorite color here: ")
+
+        // Confirm - Apresenta dois botões(Ok ou cancelar)
+        confirm("Do you like js?")
+
+        document.write(`I know that your favorite color is ${color}`)
+
+        let nota1 = Number(prompt("Write your first result: "))
+        let nota2 = Number(prompt("Write your second result: "))
+        let media = (nota1 + nota2) / 2
+
+        alert(`Your media is ${media}`)
+
+        if(media >= 7){
+            alert(`Congrats, you are approved`)
+        }
+        else{
+            alert(`Study more in the next year`)
+        }
+        
+        for(let i = 10; i > 0; i--){
+            document.write(`<br>${i}`)
+        }
+    </script>
+</body>
+</html>
