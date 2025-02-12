@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+</head>
+<body>
+    <h1>Media</h1>
+    <script>
+    let grade1 = Number(prompt("Enter the first grade:"))
+    let grade2 = Number(prompt("Enter the second grade:"))
+    let media = (grade1 + grade2) / 2
+
+    if (grade1 > media) {
+        document.write(`The first grade (${grade1}) is above the media (${media}).`)
+    } else {
+        document.write(`The first grade (${grade1}) is below the media (${media}).`)
+    }
+    document.write(`The first grade (${grade1}) is ${grade1 % 2 === 0 ? "even" : "odd"}.`)
+
+    if (grade2 > media) {
+        document.write(`The second grade (${grade2}) is above the media (${media}).`)
+    } else {
+        document.write(`The second grade (${grade2}) is below the media (${media}).`)
+    }
+    </script>
+</body>
+</html>

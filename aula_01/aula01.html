@@ -6,7 +6,7 @@
     <title>Aula 01</title>
 </head>
 <body>
-    <h1>My first class</h1>
+    <h1>05/02/2025</h1>
     <script>
         // Alert - Chamo a atenção do usuário, fazendo com que ele aceite o que eu desejo
         // Boas Práticas - é interessante colocar o caminho do comando que deseja, porém depois do ecma 18, não se faz obrigatório
@@ -20,11 +20,17 @@
 
         document.write(`I know that your favorite color is ${color}`)
 
+        //var: forma antiga 
+        //const: constante
+        //let: valores flexíveis dentro do escopo
+
         let nota1 = Number(prompt("Write your first result: "))
         let nota2 = Number(prompt("Write your second result: "))
         let media = (nota1 + nota2) / 2
 
         alert(`Your media is ${media}`)
+
+        //Condicionais
 
         if(media >= 7){
             alert(`Congrats, you are approved`)
@@ -33,8 +39,57 @@
             alert(`Study more in the next year`)
         }
         
+        //Laço de Repetição
+
         for(let i = 10; i > 0; i--){
             document.write(`<br>${i}`)
+        }
+
+        let contador = 100
+        while(contador > 0){
+            contador = contador - 10
+            document.write(`Contador ${contador}<br>`)
+        }
+
+        //quando quero que uma instrução seja executada pelo menos uma vez
+
+        let a = 1
+
+        do{
+            if(a % 2 == 0 ){
+                document.write(`O número ${a} é par`)
+            }else{
+                document.write(`O número ${a} é impar`)
+            }
+            a++
+        } while(a <= 20)
+
+        //switch case
+
+        let operacoes = Number(prompt("Escolha 1-Soma 2-Subtração 3-Mulltiplicação 4-Divisão"))
+        let n1 = Number(prompt("Número 1: "))
+        let n2 = Number(prompt("Número 2: "))
+
+        switch(operacoes){
+            case 1:
+                resultado = n1 + n2
+                document.write("soma é ",resultado)
+                break
+            case 2:
+                resultado = n1 - n2
+                document.write("subtração é ",resultado)
+                break
+            case 3:
+                soma = n1 * n2
+                document.write("multiplicacao é ",soma)
+                break
+            case 4:
+                soma = n1 / n2
+                document.write("divisao é",soma)
+                break
+
+            default:
+                document.write("Opção invalida")
         }
     </script>
 </body>

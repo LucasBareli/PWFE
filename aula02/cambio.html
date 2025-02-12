@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio</title>
+</head>
+<body>
+    <h1>Cambio</h1>
+    <script>
+        let name_money = prompt("Write a name money: ")
+        let tax = Number(prompt(`Write a tax in ${name_money}: `))
+        let value = Number(prompt("Write how much do you want convert: "))
+        let convert = value / tax
+        document.write(`${value} equivalent ${convert} in ${name_money}`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedra, papel e tesoura</title>
+</head>
+<body>
+    <h1>Pedra, papel e tesoura</h1>
+    <script>
+        let choices = ["Rock", "Paper", "Scissors"];
+        let player1Choice = prompt("Player 1: Choose Rock, Paper, or Scissors:")
+        let player2Choice = prompt("Player 2: Choose Rock, Paper, or Scissors:")
+
+        document.write(`Player 1 chose: ${player1Choice}<br>`);
+        document.write(`Player 2 chose: ${player2Choice}<br>`);
+
+        if (player1Choice === player2Choice) {
+            document.write("It's a tie!");
+        } else if (
+            (player1Choice === "Rock" && player2Choice === "Scissors") ||
+            (player1Choice === "Paper" && player2Choice === "Rock") ||
+            (player1Choice === "Scissors" && player2Choice === "Paper")
+        ) {
+            document.write("Player 1 wins!")
+        } else {
+            document.write("Player 2 wins!")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+<body>
+    <h1>IMC</h1>
+    <script>
+        let weight = Number(prompt("Enter your weight in kg:"))
+        let height = Number(prompt("Enter your height in meters:"))
+        let iml = weight / (height ** 2)
+
+        document.write(`Your IMC is ${iml}`)
+    </script>
+</body>
+</html>
