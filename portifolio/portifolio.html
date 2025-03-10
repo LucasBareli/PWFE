@@ -5,22 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio - Lucas Bareli</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="portifolio.css">
 </head>
 <body>
     <header>
         <div class="container">
             <div class="logo">Lucas Bareli</div>
-            <p>Portfólio de Exercícios - Aula de JavaScript</p>
         </div>
     </header>
 
     <nav>
         <div class="container">
             <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#exercise-section">Exercícios</a></li>
-                <li><a href="#container_footer">Contato</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#exercise-section">Exercices</a></li>
+                <li><a href="#container_footer">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -30,20 +32,20 @@
         <section class="about-me">
             <img src="" alt="Lucas Bareli">
             <div class="text">
-                <h2>Sobre Mim</h2>
-                <p>Sou um desenvolvedor apaixonado por criar soluções eficientes e elegantes. Tenho experiência em front-end e estou sempre em busca de aprender mais para oferecer experiências únicas aos usuários.</p>
-                <p>Trabalho com tecnologias como HTML, CSS, JavaScript e frameworks modernos. Meu objetivo é criar sites e aplicações que sejam não apenas funcionais, mas também visualmente agradáveis.</p>
+                <h2>About Me</h2>
+                <p>My name is Lucas Bareli i am 18 years old today i work as an apprendice at Bosch and studing Systems Develompment at Senai and IT Managment at Fatec.</p>
+                <p>I used to in my projects Front-End at Senai: HTML, CSS and JavaScript.</p>
             </div>
         </section>
 
 
-        <section class="exercise-section">
-            <div class="exercise-card" onclick="window.location.href='exercicio1.html'">
-                <h3>Exercício 1</h3>
-                <p>Desafio sobre arrays em JavaScript.</p>
+        <section id="exercise-section">
+            <div class="exercise-card" onclick="window.location.href='https://www.figma.com/design/Y7YOCIStb8oHVLMTPEkGKR/Grande-Campinas?node-id=0-1&t=GIgxlqkqAGraNXFg-1'">
+                <h3>Prototype</h3>
+                <p>Prototype using Figma about my website Grande Campinas</p>
             </div>
-            <div class="exercise-card" onclick="window.location.href='exercicio2.html'">
-                <h3>Exercício 2</h3>
+            <div class="exercise-card" onclick="window.location.href='aula01.html'">
+                <h3>Laço de Repetição</h3>
                 <p>Trabalhando com funções em JavaScript.</p>
             </div>
             <div class="exercise-card" onclick="window.location.href='exercicio2.html'">
@@ -91,8 +93,14 @@
     </main>
 
     <footer>
-        <div class="container_footer">
+        <div id="container_footer">
             <p>&copy; 2025 Lucas Bareli - Todos os direitos reservados</p>
+            <a href="https://github.com/LucasBareli">
+                <i class="bi bi-github"></i>
+            </a>
+            <a href="">
+                <i class="bi bi-linkedin"></i>
+            </a>
         </div>
     </footer>
 </body>
