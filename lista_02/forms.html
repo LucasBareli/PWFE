@@ -1,0 +1,28 @@
+
+<form id="cadastroForm">
+    Nome: <input type="text" id="nome" /><br>
+    Endereço: <input type="text" id="endereco" /><br>
+    Sexo: <input type="radio" name="sexo" value="masculino" /> Masculino
+          <input type="radio" name="sexo" value="feminino" /> Feminino<br>
+    Telefone: <input type="text" id="telefone" /><br>
+    Celular: <input type="text" id="celular" /><br>
+    Email: <input type="email" id="email" /><br>
+    <button type="button" onclick="validarFormulario()">Enviar</button>
+</form>
+
+<script>
+    const validarFormulario = () => {
+        const nome = document.getElementById("nome").value;
+        const endereco = document.getElementById("endereco").value;
+        const sexo = document.querySelector('input[name="sexo"]:checked');
+        const telefone = document.getElementById("telefone").value;
+        const celular = document.getElementById("celular").value;
+        const email = document.getElementById("email").value;
+
+        if (!nome || !endereco || !sexo || !telefone || !celular || !email) {
+            alert("Todos os campos devem ser preenchidos.");
+        } else {
+            alert("Cadastro enviado com sucesso!");
+        }
+    };
+</script>

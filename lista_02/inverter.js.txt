@@ -1,4 +1,0 @@
-const inverterString = (str) => str.split('').reverse().join('');
-
-// Exemplo de uso
-console.log(inverterString('Olá Mundo!')); // "!odnuM álO"

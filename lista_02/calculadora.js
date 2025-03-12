@@ -8,5 +8,4 @@ const calcular = (a, b, operacao) => {
     }
 };
 
-// Exemplo de uso
-console.log(calcular(10, 5, '+')); // 15
+console.log(calcular(10, 5, '+')); 
