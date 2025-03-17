@@ -6,4 +6,4 @@ const calcularINSS = (salario) => {
     return 6433.57 * 0.14;
 };
 
-console.log(calcularINSS(3000));
+document.write(calcularINSS(3000));

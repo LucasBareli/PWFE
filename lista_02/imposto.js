@@ -6,4 +6,4 @@ const calcularImpostoRenda = (salario) => {
     return salario * 0.275;
 };
 
-console.log(calcularImpostoRenda(3000)); 
+document.write(calcularImpostoRenda(3000)); 

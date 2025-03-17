@@ -12,4 +12,4 @@ const calcularCedulas = (valor) => {
     return cedulas;
 };
 
-console.log(calcularCedulas(576)); 
+document.write(calcularCedulas(576)); 

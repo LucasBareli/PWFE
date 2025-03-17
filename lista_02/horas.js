@@ -1,3 +1,3 @@
 const converterHorasParaMinutos = (horas) => horas * 60;
 
-console.log(converterHorasParaMinutos(2)); 
+document.write(converterHorasParaMinutos(2)); 

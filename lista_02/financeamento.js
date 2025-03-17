@@ -3,4 +3,4 @@ const simularFinanciamento = (valor, numeroDeParcelas, taxaDeJuros) => {
     return prestacao.toFixed(2);
 };
 
-console.log(simularFinanciamento(10000, 12, 0.02)); 
+document.write(simularFinanciamento(10000, 12, 0.02)); 
