@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vectors A, B, and C</title>
+</head>
+<body>
+
+    <h2>Enter 5 Integers for Vector A</h2>
+
+    <form id="numbersForm">
+        <label for="numA1">A1: </label><input type="number" id="numA1" required><br><br>
+        <label for="numA2">A2: </label><input type="number" id="numA2" required><br><br>
+        <label for="numA3">A3: </label><input type="number" id="numA3" required><br><br>
+        <label for="numA4">A4: </label><input type="number" id="numA4" required><br><br>
+        <label for="numA5">A5: </label><input type="number" id="numA5" required><br><br>
+
+        <h2>Enter 5 Integers for Vector B</h2>
+
+        <label for="numB1">B1: </label><input type="number" id="numB1" required><br><br>
+        <label for="numB2">B2: </label><input type="number" id="numB2" required><br><br>
+        <label for="numB3">B3: </label><input type="number" id="numB3" required><br><br>
+        <label for="numB4">B4: </label><input type="number" id="numB4" required><br><br>
+        <label for="numB5">B5: </label><input type="number" id="numB5" required><br><br>
+
+        <button type="button" onclick="processVectors()">Submit</button>
+    </form>
+
+    <h3>Result:</h3>
+    <p><strong>Vector A:</strong> <span id="vectorA"></span></p>
+    <p><strong>Vector B:</strong> <span id="vectorB"></span></p>
+    <p><strong>Vector C (Alternating A and B):</strong> <span id="vectorC"></span></p>
+
+    <script>
+        function processVectors() {
+            const A = [];
+            for (let i = 1; i <= 5; i++) {
+                const num = parseInt(document.getElementById("numA" + i).value);
+                A.push(num);
+            }
+
+            const B = [];
+            for (let i = 1; i <= 5; i++) {
+                const num = parseInt(document.getElementById("numB" + i).value);
+                B.push(num);
+            }
+
+            const C = [];
+            for (let i = 0; i < 5; i++) {
+                C.push(A[i]);
+                C.push(B[i]);
+            }
+
+            document.getElementById("vectorA").innerText = A.join(", ");
+            document.getElementById("vectorB").innerText = B.join(", ");
+            document.getElementById("vectorC").innerText = C.join(", ");
+        }
+    </script>
+
+</body>
+</html>

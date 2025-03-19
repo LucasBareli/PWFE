@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Tax Calculator</title>
+</head>
+<body>
+    <h1>Income Tax Calculator</h1>
+    <p>Enter your monthly salary to calculate the income tax:</p>
+    <input type="number" id="salary" placeholder="Enter your salary">
+    <button onclick="calculateTax()">Calculate</button>
+    <p>Tax Amount: <span id="result"></span></p>
+
+    <script>
+        const calculateIncomeTax = (salary) => {
+            if (salary <= 1903.98) {
+                return 0; 
+            } else if (salary <= 2826.65) {
+                return salary * 0.075 - 142.80; // 7.5% rate
+            } else if (salary <= 3751.05) {
+                return salary * 0.15 - 354.80; // 15% rate
+            } else if (salary <= 4664.68) {
+                return salary * 0.225 - 636.13; // 22.5% rate
+            } else {
+                return salary * 0.275 - 869.36; // 27.5% rate
+            }
+        };
+
+        const calculateTax = () => {
+            const salary = parseFloat(document.getElementById('salary').value);
+            const result = document.getElementById('result');
+
+            if (isNaN(salary) || salary <= 0) {
+                result.textContent = "Please enter a valid salary.";
+                return;
+            }
+
+            const tax = calculateIncomeTax(salary);
+            result.textContent = `R$ ${tax.toFixed(2)}`;
+        };
+    </script>
+</body>
+</html>

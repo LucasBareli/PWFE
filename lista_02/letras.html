@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter Splitter</title>
+</head>
+<body>
+    <h1>Letter Splitter</h1>
+    <p>Enter your name to see each letter displayed separately:</p>
+    <input type="text" id="inputName" placeholder="Type your name here">
+    <button onclick="splitName()">Split</button>
+    <p>Separated Letters:</p>
+    <ul id="result"></ul>
+
+    <script>
+        function splitName() {
+            const name = document.getElementById('inputName').value;
+            const resultList = document.getElementById('result');
+            resultList.innerHTML = ''; // Clear previous results
+
+            for (const letter of name) {
+                const listItem = document.createElement('li');
+                listItem.textContent = letter;
+                resultList.appendChild(listItem);
+            }
+        }
+    </script>
+</body>
+</html>

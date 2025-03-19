@@ -1,28 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form id="registrationForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" placeholder="Enter your name"><br><br>
 
-<form id="cadastroForm">
-    Nome: <input type="text" id="nome" /><br>
-    Endereço: <input type="text" id="endereco" /><br>
-    Sexo: <input type="radio" name="sexo" value="masculino" /> Masculino
-          <input type="radio" name="sexo" value="feminino" /> Feminino<br>
-    Telefone: <input type="text" id="telefone" /><br>
-    Celular: <input type="text" id="celular" /><br>
-    Email: <input type="email" id="email" /><br>
-    <button type="button" onclick="validarFormulario()">Enviar</button>
-</form>
+        <label for="address">Address:</label><br>
+        <input type="text" id="address" placeholder="Enter your address"><br><br>
 
-<script>
-    const validarFormulario = () => {
-        const nome = document.getElementById("nome").value;
-        const endereco = document.getElementById("endereco").value;
-        const sexo = document.querySelector('input[name="sexo"]:checked');
-        const telefone = document.getElementById("telefone").value;
-        const celular = document.getElementById("celular").value;
-        const email = document.getElementById("email").value;
+        <label>Gender:</label><br>
+        <input type="radio" name="gender" id="male" value="Male"> Male<br>
+        <input type="radio" name="gender" id="female" value="Female"> Female<br><br>
 
-        if (!nome || !endereco || !sexo || !telefone || !celular || !email) {
-            alert("Todos os campos devem ser preenchidos.");
-        } else {
-            alert("Cadastro enviado com sucesso!");
+        <label for="phone">Phone:</label><br>
+        <input type="text" id="phone" placeholder="Enter your phone number"><br><br>
+
+        <label for="cell">Cell:</label><br>
+        <input type="text" id="cell" placeholder="Enter your cell number"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" placeholder="Enter your email"><br><br>
+
+        <button type="button" onclick="validateForm()">Submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            const name = document.getElementById('name').value.trim();
+            const address = document.getElementById('address').value.trim();
+            const gender = document.querySelector('input[name="gender"]:checked');
+            const phone = document.getElementById('phone').value.trim();
+            const cell = document.getElementById('cell').value.trim();
+            const email = document.getElementById('email').value.trim();
+
+            if (!name) {
+                alert('The Name field cannot be empty.');
+                return;
+            }
+
+            if (!address) {
+                alert('The Address field cannot be empty.');
+                return;
+            }
+
+            if (!gender) {
+                alert('The Gender field must be selected.');
+                return;
+            }
+
+            if (!phone) {
+                alert('The Phone field cannot be empty.');
+                return;
+            }
+
+            if (!cell) {
+                alert('The Cell field cannot be empty.');
+                return;
+            }
+
+            if (!email) {
+                alert('The Email field cannot be empty.');
+                return;
+            }
+
+            alert('Form submitted successfully!');
         }
-    };
-</script>
+    </script>
+</body>
+</html>

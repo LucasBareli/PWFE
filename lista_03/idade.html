@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Above Average</title>
+</head>
+<body>
+
+    <h2>Enter the Ages of 20 People</h2>
+
+    <form id="ageForm">
+        <!-- Create 20 input fields for age input -->
+        <div id="inputs">
+            <label for="age1">Age 1: </label><input type="number" id="age1" required><br><br>
+            <label for="age2">Age 2: </label><input type="number" id="age2" required><br><br>
+            <label for="age3">Age 3: </label><input type="number" id="age3" required><br><br>
+            <label for="age4">Age 4: </label><input type="number" id="age4" required><br><br>
+            <label for="age5">Age 5: </label><input type="number" id="age5" required><br><br>
+            <label for="age6">Age 6: </label><input type="number" id="age6" required><br><br>
+            <label for="age7">Age 7: </label><input type="number" id="age7" required><br><br>
+            <label for="age8">Age 8: </label><input type="number" id="age8" required><br><br>
+            <label for="age9">Age 9: </label><input type="number" id="age9" required><br><br>
+            <label for="age10">Age 10: </label><input type="number" id="age10" required><br><br>
+            <label for="age11">Age 11: </label><input type="number" id="age11" required><br><br>
+            <label for="age12">Age 12: </label><input type="number" id="age12" required><br><br>
+            <label for="age13">Age 13: </label><input type="number" id="age13" required><br><br>
+            <label for="age14">Age 14: </label><input type="number" id="age14" required><br><br>
+            <label for="age15">Age 15: </label><input type="number" id="age15" required><br><br>
+            <label for="age16">Age 16: </label><input type="number" id="age16" required><br><br>
+            <label for="age17">Age 17: </label><input type="number" id="age17" required><br><br>
+            <label for="age18">Age 18: </label><input type="number" id="age18" required><br><br>
+            <label for="age19">Age 19: </label><input type="number" id="age19" required><br><br>
+            <label for="age20">Age 20: </label><input type="number" id="age20" required><br><br>
+        </div>
+
+        <button type="button" onclick="calculateAboveAverage()">Show Ages Above Average</button>
+    </form>
+
+    <h3>Result:</h3>
+    <p id="result"></p>
+
+    <script>
+        function calculateAboveAverage() {
+            const ages = [];
+            for (let i = 1; i <= 20; i++) {
+                const age = parseInt(document.getElementById("age" + i).value);
+                ages.push(age);
+            }
+
+            const sum = ages.reduce((acc, age) => acc + age, 0);
+            const average = sum / ages.length;
+
+            const aboveAverage = ages.filter(age => age > average);
+
+            document.getElementById("result").innerHTML = `Ages above the average: ${aboveAverage.join(", ")}`;
+        }
+    </script>
+
+</body>
+</html>

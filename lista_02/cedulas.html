@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Breakdown</title>
+</head>
+<body>
+    <h1>Cash Breakdown</h1>
+    <p>Enter an amount to see the required bills:</p>
+    <input type="number" id="amount" placeholder="Enter amount in R$">
+    <button onclick="calculateBills()">Calculate</button>
+    <p>Breakdown:</p>
+    <ul id="result"></ul>
+
+    <script>
+        function calculateBills() {
+            const amount = parseInt(document.getElementById('amount').value, 10);
+            const resultList = document.getElementById('result');
+            resultList.innerHTML = ''; // Clear previous results
+
+            if (isNaN(amount) || amount < 0) {
+                resultList.innerHTML = '<li>Please enter a valid positive amount.</li>';
+                return;
+            }
+
+            const bills = [200, 100, 50, 20, 10, 5, 1];
+            let remaining = amount;
+
+            bills.forEach(bill => {
+                const count = Math.floor(remaining / bill);
+                if (count > 0) {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `${count} bill(s) of R$${bill}`;
+                    resultList.appendChild(listItem);
+                    remaining %= bill;
+                }
+            });
+        }
+    </script>
+</body>
+</html>

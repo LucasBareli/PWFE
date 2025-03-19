@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Numbers</title>
+</head>
+<body>
+    <h1>Sort Numbers in Ascending Order</h1>
+    <p>Enter three numbers:</p>
+    <input type="number" id="num1" placeholder="First number">
+    <input type="number" id="num2" placeholder="Second number">
+    <input type="number" id="num3" placeholder="Third number">
+    <button onclick="sortNumbers()">Sort</button>
+    <p>Sorted Numbers: <span id="result"></span></p>
+
+    <script>
+        function sortNumbers() {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            const num3 = parseFloat(document.getElementById('num3').value);
+
+            if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+                document.getElementById('result').textContent = "Please enter valid numbers.";
+                return;
+            }
+
+            const numbers = [num1, num2, num3];
+            numbers.sort((a, b) => a - b);
+
+            document.getElementById('result').textContent = numbers.join(", ");
+        }
+    </script>
+</body>
+</html>

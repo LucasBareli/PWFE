@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Payment Calculator</title>
+</head>
+<body>
+
+    <h2>Loan Payment Calculator</h2>
+
+    <form id="loanForm">
+        <label for="loanAmount">Loan Amount: </label>
+        <input type="number" id="loanAmount" required><br><br>
+
+        <label for="interestRate">Annual Interest Rate (%): </label>
+        <input type="number" id="interestRate" required><br><br>
+
+        <label for="loanTerm">Loan Term (in months): </label>
+        <input type="number" id="loanTerm" required><br><br>
+
+        <button type="button" onclick="calculateLoanPayment()">Calculate Payment</button>
+    </form>
+
+    <h3>Result:</h3>
+    <p id="result"></p>
+
+    <script>
+        function calculateLoanPayment() {
+            const loanAmount = parseFloat(document.getElementById("loanAmount").value);
+            const interestRate = parseFloat(document.getElementById("interestRate").value) / 100;
+            const loanTerm = parseInt(document.getElementById("loanTerm").value);
+
+            const monthlyRate = interestRate / 12; 
+            const payment = loanAmount * (monthlyRate * Math.pow(1 + monthlyRate, loanTerm)) / (Math.pow(1 + monthlyRate, loanTerm) - 1);
+            
+            document.getElementById("result").innerHTML = `Monthly Payment: $${payment.toFixed(2)}`;
+        }
+    </script>
+
+</body>
+</html>

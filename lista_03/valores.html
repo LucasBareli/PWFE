@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate Numbers Between 100 and 200</title>
+</head>
+<body>
+
+    <h2>Enter 8 Numbers Between 100 and 200</h2>
+
+    <form id="numbersForm">
+        <div id="inputs">
+            <label for="num1">Number 1: </label><input type="number" id="num1" required><br><br>
+            <label for="num2">Number 2: </label><input type="number" id="num2" required><br><br>
+            <label for="num3">Number 3: </label><input type="number" id="num3" required><br><br>
+            <label for="num4">Number 4: </label><input type="number" id="num4" required><br><br>
+            <label for="num5">Number 5: </label><input type="number" id="num5" required><br><br>
+            <label for="num6">Number 6: </label><input type="number" id="num6" required><br><br>
+            <label for="num7">Number 7: </label><input type="number" id="num7" required><br><br>
+            <label for="num8">Number 8: </label><input type="number" id="num8" required><br><br>
+        </div>
+
+        <button type="button" onclick="validateAndStoreNumbers()">Submit</button>
+    </form>
+
+    <h3>Result:</h3>
+    <p id="result"></p>
+
+    <script>
+        function validateAndStoreNumbers() {
+            const numbers = [];
+            let valid = true;
+
+            for (let i = 1; i <= 8; i++) {
+                const num = parseInt(document.getElementById("num" + i).value);
+
+                if (num >= 100 && num <= 200) {
+                    numbers.push(num);
+                } else {
+                    valid = false;
+                    break;
+                }
+            }
+
+            if (valid) {
+                document.getElementById("result").innerHTML = `Stored Values: ${numbers.join(", ")}`;
+            } else {
+                document.getElementById("result").innerHTML = "Valor inválido. Todos os números devem estar entre 100 e 200.";
+            }
+        }
+    </script>
+
+</body>
+</html>

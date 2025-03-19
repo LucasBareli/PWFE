@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Name in Array</title>
+</head>
+<body>
+
+    <h2>Enter a Name to Search in the Array</h2>
+
+    <form id="nameForm">
+        <label for="newName">Enter Name: </label>
+        <input type="text" id="newName" required><br><br>
+        
+        <button type="button" onclick="findName()">Search</button>
+    </form>
+
+    <h3>Result:</h3>
+    <p id="result"></p>
+
+    <script>
+        const namesArray = ["Ana", "Carlos", "João", "Maria", "Pedro", "Lucas", "Juliana", "Fernanda", "Rafael", "Ricardo"];
+
+        function findName() {
+            const newName = document.getElementById("newName").value;
+            const index = namesArray.indexOf(newName);
+
+            if (index !== -1) {
+                document.getElementById("result").innerHTML = `Name found at position: ${index}`;
+            } else {
+                document.getElementById("result").innerHTML = "Nome não encontrado!";
+            }
+        }
+    </script>
+
+</body>
+</html>
