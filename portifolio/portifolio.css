@@ -289,6 +289,24 @@ img {
   box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
 }
 
+.skills_data-img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  font-weight: var(--font-semi);
+  padding: 0.5rem 1rem;
+  margin-bottom: var(--mb-4);
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+}
+
+.skills_data-img img {
+  max-width: 150px; 
+  margin-left: auto;
+  border-radius: 0.5rem;
+}
+
 .skills_icon {
   font-size: 2rem;
   margin-right: var(--mb-2);
