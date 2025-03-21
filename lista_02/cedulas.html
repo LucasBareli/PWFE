@@ -17,7 +17,7 @@
         function calculateBills() {
             const amount = parseInt(document.getElementById('amount').value, 10);
             const resultList = document.getElementById('result');
-            resultList.innerHTML = ''; // Clear previous results
+            resultList.innerHTML = ''; 
 
             if (isNaN(amount) || amount < 0) {
                 resultList.innerHTML = '<li>Please enter a valid positive amount.</li>';
